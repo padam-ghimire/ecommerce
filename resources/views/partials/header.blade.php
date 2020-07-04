@@ -1,13 +1,13 @@
 <div class="header">
     <div class="header-top">
         <div class="row">
-            <div class="col col-lg-2 col-md-2 col-xs-12 col-sm-4">
+            <div class="col col-lg-2 col-md-2 col-xs-12 col-sm-3">
                 <a href="" class="logo">
                     <h1 class="no-margin">Kirana Pasal</h1>
                 </a>
             </div>
       
-            <div class="col col-lg-10 col-md-10 col-xs-12 col-sm-8">
+            <div class="col col-lg-10 col-md-10 col-xs-12 col-sm-9">
                 <form action="" method="post" class="msf">
                     <div class="form-section section-left">
                         <select name="" id="" class="form-control control-select">
@@ -42,7 +42,7 @@
                     <li>
                         <a href="">
                             <span class="header-nav-line header-nav-line-1">Welcome, Sign in</span>
-                            <span class="header-nav-line header-nav-line-2">Account & Lists</span>
+                            <span class="header-nav-line header-nav-line-2">Account & Lists <i class="fa fa-caret-down"></i></span>
                         </a>
                     </li>
                     <li>
@@ -50,7 +50,7 @@
                     </li>
                     <li class="relative">
                         <a href="" class="header-shop">
-                            <img src="{{asset('images/app/cart.png')}}" alt="" srcset="">
+                            <img  class="img-fluid" src="{{asset('images/app/cart.png')}}" alt="" srcset="">
                             <span class="items-count">10</span>
                         </a>
                     </li>

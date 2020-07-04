@@ -30,7 +30,18 @@
         <div class="row">
             <div class="col col-offset-lg-2 col-offset-md-8 col-lg-6 col-md-6 col-xs-12 col-sm-8">
                 <ul class="header-nav">
-                    <li class="relative"><a href="#" class="categories-toggle">Categories <i class="fa fa-caret-down"></i></a></li>
+                    
+                    
+                    <li class="relative"><a href="#" class="categories-toggle">Categories <i class="fa fa-caret-down"></i></a>
+                 
+                    <div class="a-list">
+                        <a href="#" class="list-item">Electronic</a>
+                        <a href="3" class="list-item">Desktop</a>
+                        <a href="#" class="list-item">Laptops</a>
+                        <a href="#" class="list-item">Watches</a>
+                        <a href="#" class="list-item">Phones</a>
+                     </div>
+                     </li>
                     <li><a href="">Home</a></li>
                     <li><a href="">Track order</a></li>
                     <li><a href="">Contact</a></li>
@@ -41,9 +52,26 @@
                 <ul class="header-nav multi-line-header-nav">
                     <li>
                         <a href="">
-                            <span class="header-nav-line header-nav-line-1">Welcome, Sign in</span>
+                            <span class="header-nav-line header-nav-line-1">Welcome, {{Auth::check() ? Auth()->user()->name : 'sign in'}}</span>
                             <span class="header-nav-line header-nav-line-2">Account & Lists <i class="fa fa-caret-down"></i></span>
                         </a>
+                    <div class="a-list">
+                        <a href="{{route('account')}}" class="list-item">Account</a>
+                        <a class="list-item">Wish List</a>
+
+                        @if(Auth::check())
+                            <a href="{{route('logout')}}" onclick='event.preventDefault;this.querySelector("form.logout-form").submit()' class="list-item">Logout</a>
+                            <form action="{{route('logout')}}"  method="post" class="logout-form">
+                                @csrf
+                                    <input type="submit" class="hide">
+                            </form>
+
+                        @else
+                            <a href="{{route('login')}}" class="list-item">Login</a>
+                            <a href="{{route('register')}}" class="list-item">Register</a>
+                        @endif
+                    </div>
+
                     </li>
                     <li>
                         <a href="#" class="header-nav-bold">Orders</a>
@@ -54,7 +82,6 @@
                             <span class="items-count">10</span>
                         </a>
                     </li>
-                    |
                     <li class="relative">
                         <a href="" class="header-shop">
                             <img src="{{asset('images/app/wish.png')}}" alt="" srcset="">

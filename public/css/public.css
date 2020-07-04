@@ -24,3 +24,10 @@ form .form-control {
     border-left-width: 1px;
     border-left: none;
 }
+
+.relative {
+    position: relative;
+}
+.hide {
+    display: none;
+}

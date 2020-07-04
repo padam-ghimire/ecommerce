@@ -132,3 +132,32 @@
 .header-mid {
     margin-top: 5px;
 }
+
+.header div.a-list {
+    position: absolute;
+    top: 100;
+    background: #fbfafa;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 0;
+    z-index: 3000;
+    display: none;
+}
+
+.header div.a-list .list-item {
+    display: block;
+    color: #646464;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 4px 4px;
+    font-family: sans-serif;
+}
+
+.header-nav > li:hover div.a-list {
+    display: block;
+}
+
+/* .main {
+    min-height: 300px;
+} */

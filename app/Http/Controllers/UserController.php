@@ -8,9 +8,13 @@ class UserController extends Controller
 {
     //
 
+    public function __construct(){
+        $this->middleware('auth')->only('account');
+    }
+
 
     public function account(){
 
-        return "Account";
+        return view('user.account');
     }
 }

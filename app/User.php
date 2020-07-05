@@ -39,6 +39,11 @@ class User extends Authenticatable
 
 
     public function roles(){
-        return $this->belongsToMany('App\Model\Role','user_roles','roleId','userId');
+        return $this->belongsToMany('App\Models\Role','user_roles','roleId','userId');
+    }
+
+
+    public function isAdmin(){
+        return $this->roles->pluck('role')->contains('admin');
     }
 }

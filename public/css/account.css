@@ -1,0 +1,28 @@
+.account-sidebar {
+    width: 20%;
+    background: #1f2630;
+    height: 398px;
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
+}
+
+.account-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.account-sidebar ul li {
+    margin: 10px 10px;
+}
+
+.account-sidebar ul li a {
+    color: #e7e0e0;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.account-main-content {
+    width: 80%;
+    height: 100%;
+}

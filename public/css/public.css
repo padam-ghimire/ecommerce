@@ -31,3 +31,7 @@ form .form-control {
 .hide {
     display: none;
 }
+
+.left {
+    float: left;
+}
